@@ -1,0 +1,69 @@
+.index-page {
+
+    &__header {
+        position: relative;
+
+        text-align: center;
+
+        @include clearfix;
+
+        @include above($tablet) {
+            padding-left: rem(90);
+            padding-right: rem(90);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+    }
+
+    &__title {
+        @include above($tablet) {
+            order: 1;
+            margin-right: rem(20);
+            margin-bottom: 0;
+
+            &::after {
+                content: ' - ';
+
+            }
+        }
+    }
+
+    &__subtitle {
+        @include above($tablet) {
+            order: 2;
+            margin: rem(7) 0 0;
+        }
+    }
+
+    &__into-list {
+        @include above($tablet) {
+            width: 100%;
+            order: 3;
+        }
+    }
+
+    &__avatar {
+        margin-bottom: rem(20);
+        display: inline-block;
+        vertical-align: top;
+
+        @include above($tablet) {
+            margin-right: rem(30);
+            margin-bottom: 0;
+        }
+    }
+
+    &__skills-wrap {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__social {
+        @include above($tablet) {
+            position: absolute;
+            top: rem(30);
+            right: rem(90);
+        }
+    }
+}

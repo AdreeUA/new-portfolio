@@ -1,0 +1,12 @@
+include ../logo/logo
+include ../nav/nav
+include ../social/social
+include ../hamburger/hamburger
+
+mixin header(data)
+    +b.HEADER.header()&attributes(attributes)
+        +logo.__logo
+        +nav(nav.defaults).__nav
+        +social(social.defaults)._theme-header.__social
+        +e.hamburger-wrap
+            +hamburger

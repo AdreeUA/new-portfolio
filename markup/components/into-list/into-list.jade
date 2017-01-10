@@ -1,0 +1,4 @@
+mixin into-list(data)
+    +b.UL.into-list()&attributes(attributes)
+        each item in data
+            +e.item= item

@@ -1,0 +1,31 @@
+include ../../title/title
+include ../../subtitle/subtitle
+include ../../avatar/avatar
+include ../../into-list/into-list
+include ../../heading/heading
+include ../../portfolio/portfolio
+include ../../btn/btn
+include ../../skills/skills
+include ../../block/block
+
+mixin index-page(data)
+    +b.index-page()&attributes(attributes).section
+        +block.__header
+            +subtitle({tag: 'p'}).index-page__subtitle Front-end Developer
+            +title({tag: 'h1'}).index-page__title Змиевской Андрей
+            +into-list(intoList.defaults).index-page__into-list
+            +avatar.index-page__avatar
+            +social(social.defaults)._theme-header.index-page__social
+
+        +block
+            +heading Последние работы
+            +portfolio(portfolio.indexPage)
+            +btn(href='/portfolio.html')._full Больше работ
+
+        +block
+            +heading Навыки и технологии
+            +e.skills-wrap
+                +skills(skills.development)
+                //+skills(skills.development)
+
+

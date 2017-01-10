@@ -1,0 +1,21 @@
+.logo {
+    display: block;
+
+    font-family: $font-decor;
+    font-size: rem(43);
+    color: $color-second;
+    text-decoration: none;
+
+    &:hover {
+        color: $color-hover;
+    }
+
+    &__disc {
+        display: block;
+        margin-top: rem(10);
+
+        font-family: $font-main;
+        font-size: rem(12px);
+        color: $color-main;
+    }
+}

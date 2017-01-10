@@ -1,0 +1,42 @@
+include ../btn/btn
+include ../icon/icon
+
+mixin portfolio(data)
+    +b.portfolio()&attributes(attributes)
+        each item in data
+            +e.ARTICLE.item
+                +e.content
+                    +e.A.item-thumb(href=item.link target='_blank')
+                        +e.IMG.img(src=item.img alt=item.title)
+                    +e.H4.title= item.title
+                    +e.text= item.text
+
+                +e.btn-wrap
+
+                    if item.link
+                        +btn(href=item.link target='_blank').__btn Посмотреть
+
+                    if item.webLink
+                        +btn(href=item.webLink target='_blank' class='_icon').__btn
+                            +icon({ icon: 'internet', class: 'portfolio__icon'})
+                            | Web версия
+
+                    if item.mobileLink
+                        +btn(href=item.mobileLink target='_blank' class='_icon').__btn
+                            +icon({ icon: 'tablet', class: 'portfolio__icon'})
+                            | Моб. версия
+
+                    if item.markup
+                        +btn(href=item.markup target='_blank' class='_icon').__btn
+                            +icon({ icon: 'computer', class: 'portfolio__icon'})
+                            | Верстка
+
+                    if item.mobMarkup
+                        +btn(href=item.mobMarkup target='_blank' class='_icon').__btn
+                            +icon({ icon: 'smartphone', class: 'portfolio__icon'})
+                            | Моб. верстка
+
+                    if item.mailMarkup
+                        +btn(href=item.mailMarkup target='_blank' class='_icon').__btn
+                            +icon({ icon: 'email2', class: 'portfolio__icon'})
+                            | Email письмо

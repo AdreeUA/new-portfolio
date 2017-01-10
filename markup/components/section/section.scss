@@ -1,0 +1,14 @@
+.section {
+    //margin-left: $width-menu;
+    padding: rem(42) rem(31) 0;
+
+    @include below($tablet) {
+        //padding-right: rem(31);
+        //margin-left: 0;
+        //margin-top: $height-menu;
+    }
+
+    @include below($mobile) {
+        padding: 0;
+    }
+}

@@ -1,0 +1,35 @@
+.portfolio-page {
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__back {
+        position: relative;
+
+        display: inline-block;
+        padding-left: rem(20);
+
+        font-size: rem(20);
+
+        &::before {
+            position: absolute;
+            left: 0;
+            top: 50%;
+
+            display: block;
+            //margin-left: rem(10);
+            width: rem(10);
+            height: rem(10);
+            border: rem(3) solid;
+
+            transform: rotate(-45deg) translateY(-50%);
+
+            border-bottom-color: transparent;
+            border-right-color: transparent;
+
+            content: '';
+        }
+    }
+}

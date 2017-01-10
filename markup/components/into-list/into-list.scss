@@ -1,0 +1,27 @@
+.into-list {
+    padding: 0;
+
+    list-style-type: none;
+
+    &__item {
+        display: inline-block;
+        vertical-align: top;
+
+        &:not(:first-child) {
+            margin-left: em(20);
+            &::before {
+                display: inline-block;
+                vertical-align: middle;
+                width: em(7);
+                height: em(7);
+                margin-top: em(-4);
+                margin-right: em(20);
+
+                border-radius: 50%;
+                background-color: currentColor;
+
+                content: '';
+            }
+        }
+    }
+}

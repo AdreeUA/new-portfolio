@@ -1,0 +1,86 @@
+.social {
+    font-size: 0;
+    color: $color-main;
+
+    @include list-reset;
+
+    &_theme-header {
+        .social {
+            &__item {
+                padding: 0 rem(10);
+            }
+
+            &__link {
+                border: 1px solid transparent;
+
+                border-radius: 4px;
+
+                &:hover {
+                    border-color: $color-main;
+                }
+            }
+        }
+    }
+
+    &__title {
+        text-decoration: underline;
+    }
+
+    &__item {
+        display: inline-block;
+
+        vertical-align: middle;
+    }
+
+    &__link {
+        display: block;
+        padding: rem(6);
+
+        color: inherit;
+
+        &:hover {
+            color: $color-hover;
+        }
+
+        &_github {
+            &:hover {
+                color: #000;
+            }
+        }
+
+        &_phone {
+            &:hover {
+                color: $color-second;
+            }
+        }
+
+        &_vk {
+            &:hover {
+                color: #45668e;
+            }
+        }
+
+        &_email {
+            &:hover {
+                color: #45668e;
+            }
+        }
+
+        &_skype {
+            &:hover {
+                color: #077db4;
+            }
+        }
+    }
+
+
+    &__icon {
+        @include below($tablet) {
+            width: rem(25);
+            height: rem(25);
+        }
+
+        width: rem(16);
+        height: rem(16);
+    }
+}

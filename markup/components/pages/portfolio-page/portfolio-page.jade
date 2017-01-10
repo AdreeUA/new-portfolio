@@ -1,0 +1,11 @@
+include ../../portfolio/portfolio
+include ../../heading/heading
+include ../../social/social
+
+mixin portfolio-page(data)
+    +b.portfolio-page()&attributes(attributes).section
+        +e.header.block
+            +e.A.back(href='/') Назад на главную
+            +social(social.defaults)
+        +heading Все работы
+        +portfolio(portfolio.portfolioPage).block

@@ -1,0 +1,46 @@
+// File for scss-vars.
+// For example: main colors, paddings and so on.
+
+// Color
+
+$color-main: #fff;
+$color-grey: #999;
+$color-second: #f39c12;
+$color-hover: #1197CB;
+
+// Bg-color
+
+$bg-color-main: #2a2a2a;
+$bg-color-second: #202020;
+
+// font
+
+$font-main: 'Open Sans', sans-serif;
+$font-second: 'Roboto', sans-serif;
+$font-decor: 'Yellowtail', cursive;
+
+// size
+
+$width-menu: rem(237);
+$height-menu: rem(110);
+$height-menu-mob: rem(70);
+
+// Ruprure
+
+//rupture.scale: 0 425px 768px 1024px;
+//rupture.scale-names: 'xs' 's' 'm' 'l';
+//rupture.enable-em-breakpoints: true;
+
+// Media
+
+$mobile: 425px;
+$tablet: 768px;
+$desktop: 1024px;
+
+// Gumburger button
+
+$color: #2196f3;
+$button-radius: rem(40);
+$button-line-height: 2px;
+$burger-width: 0.40 * $button-radius;
+$burger-gutter: rem(6);

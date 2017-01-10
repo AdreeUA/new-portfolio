@@ -1,0 +1,55 @@
+.header {
+    position: fixed;
+    top: 0;
+
+    width: $width-menu;
+    min-height: 100%;
+    padding: rem(40) rem(28) 0;
+
+    background-color: $bg-color-second;
+    box-shadow: 0 0 50px rgba(#000, .75);
+
+    @include below($tablet) {
+        position: fixed;
+        z-index: 10;
+
+        width: 100%;
+        min-height: $height-menu;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: rem(10) rem(28);
+    }
+
+    @include below($mobile) {
+        min-height: $height-menu-mob;
+    }
+
+    &__logo {
+        margin-bottom: rem(43);
+
+        @include below($tablet) {
+            margin: 0;
+        }
+
+        @include below($mobile) {
+            display: none;
+        }
+    }
+
+    &__social {
+        @include below($mobile) {
+            margin: 0 auto;
+        }
+    }
+
+    &__nav {
+        margin-bottom: rem(37);
+    }
+
+    &__hamburger-wrap {
+        @include above($tablet) {
+            display: none;
+        }
+    }
+}

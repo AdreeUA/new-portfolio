@@ -1,0 +1,44 @@
+// Common styles of the project
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+
+    font-size: 16 / 1400 * 100 + vw;
+
+    @include below($tablet) {
+        font-size: 16 / 768 * 100 + vw;
+    }
+
+    @include below($mobile) {
+        font-size: 16 / 425 * 100 + vw;
+    }
+}
+
+body {
+    position: relative;
+
+    min-height: 100%;
+
+    font-family: $font-main;
+    color: #fff;
+
+    background-color: $bg-color-main;
+    background-image: url(%=static=%general/bg-texture.png);
+}
+
+a {
+    color: $color-second;
+    text-decoration: none;
+
+    transition: .5s;
+
+    &:hover {
+        color: $color-hover;
+    }
+}

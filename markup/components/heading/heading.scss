@@ -1,0 +1,35 @@
+.heading {
+    margin-top: 0;
+
+    text-align: center;
+    color: $color-second;
+
+    overflow: hidden;
+
+    &__inner {
+        position: relative;
+
+        padding: 0 rem(20);
+
+        &::before,
+        &::after {
+            position: absolute;
+            top: 50%;
+
+            width: rem(400);
+            height: 2px;
+
+            background-color: $color-second;
+
+            content: '';
+        }
+
+        &::before {
+            left: 100%;
+        }
+
+        &::after {
+            right: 100%;
+        }
+    }
+}

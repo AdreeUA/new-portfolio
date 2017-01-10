@@ -1,0 +1,10 @@
+mixin nav(data)
+    +b.UL.nav()&attributes(attributes)
+
+        each item in data
+            -var activePage = '';
+            if (item.text === pageSettings.active)
+                - activePage = '_active';
+
+            +e.item(class=item.mod || '')
+                +e.A.link(href=item.link class=activePage)= item.text

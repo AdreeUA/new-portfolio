@@ -1,0 +1,21 @@
+include ../list/list
+include ../icon/icon
+
+mixin skills(data)
+    +b.skills()&attributes(attributes)
+        //+e.title-container
+        //    +e.icon
+        //        +icon({ icon: data.icon, class: 'skills__icon' })
+        //    +e.title= data.title
+
+        if data.list
+            +e.content
+                each item in data.list
+                    +e.list-container
+                        +e.subtitle= item.subtitle
+
+                        each item2 in item.items
+                            +list(item2.item)(class=item.mod || '')
+
+                        if item.text
+                            +e.P.disc= item.text

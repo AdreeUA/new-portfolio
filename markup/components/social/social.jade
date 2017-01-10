@@ -1,0 +1,17 @@
+include ../icon/icon
+
+mixin social(data)
+    +b.UL.social()&attributes(attributes)
+
+        each item in data
+            +e.item
+                +e.A.link(
+                    href=item.link
+                    class= '_' + item.icon || ''
+                    title=item.title
+                    target=item.target || ''
+                    )
+
+                    +icon({ icon: item.icon, class: 'social__icon'})
+
+                    | #{item.title}

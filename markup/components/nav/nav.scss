@@ -1,0 +1,69 @@
+.nav {
+    font-family: $font-second;
+    font-size: rem(15);
+    text-transform: uppercase;
+    line-height: 1.35;
+
+    @include list-reset;
+
+    @include below($tablet) {
+        position: absolute;
+        top: $height-menu;
+        left: 0;
+
+        padding-top: rem(30);
+        width: 100%;
+        min-height: 100vh;
+
+        font-size: rem(20);
+        text-align: center;
+
+        transform: translateX(-100%);
+        transition: transform .6s cubic-bezier(.56, .1, .34, .91);
+        background-color: rgba($bg-color-main, .9);
+    }
+
+    @include below($mobile) {
+        top: $height-menu-mob;
+    }
+
+    &_open {
+
+        @include below($tablet) {
+            position: fixed;
+            transform: translateX(0);
+        }
+    }
+
+    &__item {
+        &_block {
+            margin-top: rem(24);
+        }
+
+        @include below($tablet) {
+            margin-top: 0;
+        }
+    }
+
+    &__link {
+        display: inline-block;
+
+        color: inherit;
+        text-decoration: none;
+
+        vertical-align: top;
+
+        &_active {
+            color: $color-second;
+            cursor: default;
+
+            &:hover {
+                color: $color-second;
+            }
+        }
+
+        @include below($tablet) {
+            padding: rem(15) 0;
+        }
+    }
+}

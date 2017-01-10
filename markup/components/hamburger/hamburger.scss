@@ -1,0 +1,80 @@
+.hamburger {
+    position: relative;
+
+    display: block;
+    width: $button-radius;
+    height: $button-radius;
+
+    text-align: center;
+
+    border: $button-line-height solid transparent;
+    background: rgba(#000, .3);
+    border-radius: 4px;
+    vertical-align: middle;
+    box-shadow: 0 0 8px -2px #333;
+    transition: all .3s linear 0s;
+    outline: none;
+
+    &_open {
+        border: $button-line-height solid $color-second;
+        box-shadow: none;
+    }
+
+    &_open &__icon {
+        background: transparent;
+
+        &::before,
+        &::after {
+            transform-origin: 0 50%;
+            width: rem(20);
+        }
+
+        &::before {
+            transform: rotateZ(.64350111rad);
+        }
+
+        &::after {
+            transform: rotateZ(-.64350111rad);
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+
+        display: inline-block;
+        margin: 0 auto;
+        width: $burger-width;
+        height: $button-line-height;
+
+        background: $color-second;
+        transition: all .5s ease;
+        transform: translateY(-.5 * $button-line-height);
+
+        &::before,
+        &::after {
+            position: absolute;
+            left: 0;
+            right: 0;
+
+            margin: 0 auto;
+            width: $burger-width;
+            height: $button-line-height;
+
+            background: $color-second;
+            transition: all .5s ease;
+
+            content: '';
+        }
+
+        &::before {
+            bottom: $burger-gutter;
+        }
+
+        &::after {
+            top: $burger-gutter;
+        }
+    }
+}

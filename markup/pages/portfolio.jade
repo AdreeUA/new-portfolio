@@ -1,0 +1,8 @@
+extends ../layouts/default
+include ../components/pages/portfolio-page/portfolio-page
+
+block vars
+    -pageSettings.title = 'Портфолио';
+
+block content
+    +portfolio-page

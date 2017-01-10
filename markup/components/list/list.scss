@@ -1,0 +1,48 @@
+$listIconWidth: em(8);
+
+.list {
+    display: inline-block;
+    padding-left: rem(45);
+
+    list-style-type: none;
+    vertical-align: top;
+
+    &_half {
+        width: 49%;
+
+        @include below($tablet) {
+            width: 100%;
+        }
+    }
+
+    &__item {
+        position: relative;
+
+        margin-bottom: rem(5);
+
+        &::before {
+            position: absolute;
+            left: em(-30);
+            top: em(10);
+
+            display: inline-block;
+            width: $listIconWidth;
+            height: $listIconWidth;
+            margin-top: -$listIconWidth/2;
+            margin-right: rem(25);
+
+            color: $color-second;
+
+            border: 1px solid;
+            border-bottom-color: transparent;
+            border-left-color: transparent;
+
+            transform: rotate(45deg);
+            transition: left .5s;
+
+            vertical-align: middle;
+
+            content: '';
+        }
+    }
+}

@@ -1,0 +1,9 @@
+extends ../layouts/default
+include ../components/pages/index-page/index-page
+
+block vars
+    -pageSettings.title = 'Front-end Developer - Змиевской Андрей';
+    -pageSettings.active = 'Главная';
+
+block content
+    +index-page
